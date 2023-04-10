@@ -5,11 +5,11 @@ pipeline {
             	CREDS=credentials('jenkins-aws')
             }
     parameters {
-        string(name: 'lambda_function_name', defaultValue: 'lambda_terraform', description: 'Name of the Lambda function, note this will be also the same name uploaded to AWS!')
-        string(name: 'cypress_directory', defaultValue: 'D:\\cypress\\cypress-auto', description: 'directory of cypress, so you can use it')
-        string(name: 'cypress_test', defaultValue: 'D:\\cypress\\cypress-auto\\cypress\\e2e\\hom2.cy.js', description: 'Path to Cypress test which you want to use')
-        string(name: 'github_repository', defaultValue: 'https://raw.githubusercontent.com/vverrty/lambda/main/lambda.py', description: 'Github repository which will be used to update the AWS Lambda function')
-        string(name: 'working_directory', defaultValue: 'C:\\Users\\werrty\\Documents\\project\\clone_test', description: 'Working directory which Jenkins will use')
+        string(name: 'lambda_function_name', defaultValue: '', description: 'Name of the Lambda function, note this will be also the same name uploaded to AWS!')
+        string(name: 'cypress_directory', defaultValue: '', description: 'directory of cypress, so you can use it')
+        string(name: 'cypress_test', defaultValue: '', description: 'Path to Cypress test which you want to use')
+        string(name: 'github_repository', defaultValue: 'https://raw.githubusercontent.com/vverrty/lambda/main/lambda.py', description: 'Github RAW file which will be used to update the AWS Lambda function')
+        string(name: 'working_directory', defaultValue: '', description: 'Working directory which Jenkins will use')
 
     }
     stages {
